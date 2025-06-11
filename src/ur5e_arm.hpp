@@ -22,7 +22,6 @@
 using namespace viam::sdk;
 using namespace urcl;
 
-void reportRobotProgramState(bool program_running);
 void write_trajectory_to_file(std::string filepath,
                               const std::vector<vector6d_t>& p_p,
                               const std::vector<vector6d_t>& p_v,
@@ -32,7 +31,6 @@ void write_joint_pos_rad(vector6d_t js, std::ostream& of, unsigned long long uni
 std::string waypoints_filename(std::string path, unsigned long long unix_time_ms);
 std::string trajectory_filename(std::string path, unsigned long long unix_time_ms);
 std::string arm_joint_positions_filename(std::string path, unsigned long long unix_time_ms);
-std::chrono::milliseconds unix_now_ms();
 
 class UR5eArm : public Arm, public Reconfigurable {
    public:
