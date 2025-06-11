@@ -1,6 +1,16 @@
 #include "ur5e_arm.hpp"
 
+#include <boost/format.hpp>
+#include <boost/log/trivial.hpp>
 #include <cmath>
+#include <viam/sdk/components/component.hpp>
+#include <viam/sdk/module/module.hpp>
+#include <viam/sdk/module/service.hpp>
+#include <viam/sdk/registry/registry.hpp>
+#include <viam/sdk/resource/resource.hpp>
+
+#include "../trajectories/Trajectory.h"
+
 // locations of files necessary to build module, specified as relative paths
 const std::string SVA_FILE = "/src/kinematics/ur5e.json";
 const std::string SCRIPT_FILE = "/src/control/external_control.urscript";
